@@ -1,0 +1,51 @@
+<%= form_with(model: locadora) do |form| %>
+  <% if locadora.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(locadora.errors.count, "error") %> prohibited this locadora from being saved:</h2>
+
+      <ul>
+        <% locadora.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+      <div class="field">
+    <%= form.label :filme %>
+    <%= collection_select(:locadora, :filme_id,Filme.all ,:id, :nome, )%>
+  </div>
+
+  <div>
+    <%= form.label :nome, style: "display: block" %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div>
+    <%= form.label :contato, style: "display: block" %>
+    <%= form.number_field :contato %>
+  </div>
+
+  <div>
+    <%= form.label :endereco, style: "display: block" %>
+    <%= form.text_field :endereco %>
+  </div>
+
+  <div>
+    <%= form.label :data_de_locacao, style: "display: block" %>
+    <%= form.date_field :data_de_locacao %>
+  </div>
+
+  <div>
+    <%= form.label :data_de_devolucao, style: "display: block" %>
+    <%= form.date_field :data_de_devolucao %>
+  </div>
+
+  <div>
+    <%= form.label :valor_total, style: "display: block" %>
+    <%= form.text_field :valor_total %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

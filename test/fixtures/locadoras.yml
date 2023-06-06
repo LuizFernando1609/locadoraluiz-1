@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  contato: 1
+  endereco: MyString
+  data_de_locacao: 2023-05-30
+  data_de_devolucao: 2023-05-30
+  valor_total: 1.5
+
+two:
+  nome: MyString
+  contato: 1
+  endereco: MyString
+  data_de_locacao: 2023-05-30
+  data_de_devolucao: 2023-05-30
+  valor_total: 1.5

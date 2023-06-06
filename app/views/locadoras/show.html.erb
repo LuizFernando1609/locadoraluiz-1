@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @locadora %>
+
+<div>
+  <%= link_to "Edite a locação", edit_locadora_path(@locadora) %> |
+  <%= link_to "Volte para a tela de locação", locadoras_path %>
+
+  <%= button_to "Desfazer locação", @locadora, method: :delete %>
+</div>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Locações</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+<style>
+  body{
+  background-color: #dfdfdf;
+  background-attachment: fixed;
+  font-style: Garamond;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border: 2px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  }
+  input[type="string"]{
+     padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  }
+  input:invalid {
+  border-color: red;
+}
+  input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+  @media screen and (min-width: 10%) {
+  body {
+    background-color: blue;
+  }
+}
+
+@media screen and (min-width: 100%) {
+  body {
+    background-color: #45484a;
+  }
+}
+</style>
+  <body>
+    <%= yield %>
+  </body>
+</html>
